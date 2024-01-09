@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 
 NO_VERBOSE = "1>>/dev/null"
-DEBUG = "2>>erros.txt"
+DEBUG = "2>>errors.log"
 
 
 DevEnviroment(){
     Golang
-    sudo apt install python3.11-venv -y
-    sudo atp install python3-pip -y
+    Python
 }
 
+
 Golang(){
+    echo "[+] Golang [+]"
     if command -v go &> /dev/null; then
 	clear
 	echo "[!] Go is already installed [!]"
@@ -46,38 +47,43 @@ Golang(){
 fi
 }
 
+
 Python(){
-    sudo apt install python3
+    echo "[+] Python3 [+]"
+    sudo apt install python3 -y
     sudo apt install python3.11-venv -y
     sudo apt install python3-pip -y
-    python3 -m venv $HOME/.Space
-    source $HOME/.Space/bin/activate
-    
+    python3 -m venv $HOME/.RARE
+    source $HOME/.RARE/bin/activate
 }
 
-Tools(){
-    go install github.com/tomnomnom/assetfinder@latest $NO_VERBOSE $DEBUG
-    go install github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest $NO_VERBOSE $DEBUG
-    go install github.com/tomnomnom/anew@latest $NO_VERBOSE $DEBUG
-    go install github.com/projectdiscovery/chaos-client/cmd/chaos@latest $NO_VERBOSE $DEBUG
-    go install github.com/projectdiscovery/httpx/cmd/httpx@latest $NO_VERBOSE $DEBUG
-    go install github.com/tomnomnom/httprobe@latest $NO_VERBOSE $DEBUG
-    go install github.com/sensepost/gowitness@latest $NO_VERBOSE $DEBUG
-    go install github.com/tomnomnom/waybackurls@latest $NO_VERBOSE $DEBUG
-    go install github.com/hakluke/hakrevdns@latest $NO_VERBOSE $DEBUG
-    go install github.com/j3ssie/metabigor@latest $NO_VERBOSE $DEBUG
-    go install github.com/tomnomnom/gf@latest $NO_VERSION $DEBUG
-    go install github.com/tomnomnom/unfurl@latest $NO_VERSION $DEBUG
-    
-    
+
+install_tool(){
+    local toolname="$1"
+    local tool="$2"
+    echo "[+] Installing $toolname [+]"
+    go install $tool@latest -y $NO_VERBOSE $DEBUG
 }
+
+
+install_tool "Assetfinder" "github.com/tomnomnom/assetfinder"
+install_tool "Subfinder" "github.com/projectdiscovery/subfinder/v2/cmd/subfinder"
+install_tool "Anew" "github.com/tomnomnom/anew"
+install_tool "Chaos" "github.com/projectdiscovery/chaos-client/cmd/chaos"
+install_tool "Httpx" "github.com/projectdiscovery/httpx/cmd/httpx"
+install_tool "Httprobe" "github.com/tomnomnom/httprobe"
+install_tool "Gowitness" "github.com/sensepost/gowitness"
+install_tool "Waybackurls" "github.com/tomnomnom/waybackurls"
+install_tool "Hakrevdns" "github.com/hakluke/hakrevdns"
+install_tool "Metabigor" "github.com/j3ssie/metabigor"
+install_tool "GF" "github.com/tomnomnom/gf"
+install_tool "Unfurl" "github.com/tomnomnom/unfurl"
+
 
 AptInstall(){
+    sudo apt install git -y
     sudo apt install jq -y
     sudo snap install amass -y
     sudo apt install prips -y
-}
-
-Clone(){
     
 }

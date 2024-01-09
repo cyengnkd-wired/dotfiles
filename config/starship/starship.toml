@@ -1,0 +1,25 @@
+# Get editor completions based on the config schema
+#"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+[username]
+format = "$user 🌐 in [$path]($style)"
+# directory"
+show_always = true
+disabled = false
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+# Langs
+[python]
+symbol = '🐍'
+#pyenv_version_name = false
+#python_binary = 'python3'
+#virtualenv = true
+
+[golang]
+symbol = '🐹'

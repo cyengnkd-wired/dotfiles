@@ -1,0 +1,56 @@
+window:
+   padding:
+    x: 1
+    y: 1
+    class:
+      instance: Alacritty
+      general: Alacritty
+  dimensions:
+    columns: 100
+    lines: 27
+
+  position:
+    x: 100
+    y: 100
+  opacity: 0.95
+
+font:
+  normal:
+    family: FiraMono Nerd Font Medium
+    style: Medium
+  size: 13
+
+colors:
+  primary:
+    background: '#101010'
+    foreground: '#ffffff'
+  normal:
+    black: '#101010'
+    white: '#EBEBEB'
+    red: '#D81765'
+    green: '#97D01A'
+    yellow: '#FFA800'
+    blue: '#16B1FB'
+    magenta: '#FF2491'
+    cyan: '#0FDCB6'
+  bright:
+    black: '#38252C'
+    white: '#F8F8F8'
+    red: '#FF0000'
+    green: '#76B639'
+    yellow: '#E1A126'
+    blue: '#289CD5'
+    magenta: '#FF2491'
+    cyan: '#0A9B81'
+  directory:
+    foreground: "#ffffff"
+    background: "#DB4660"
+draw_bold_text_with_bright_colors: true
+
+cursor:
+  style:
+    shape: Block
+    blinking: On
+
+shell:
+  program: /bin/zsh

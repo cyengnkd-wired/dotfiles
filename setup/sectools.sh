@@ -29,13 +29,13 @@ Tools() {
     sleep 1
     echo -e "$red[*]$reset Python settings $red[*]$reset"
     install_app "Python version 3" "python3"
-    install_app "Python 3.11-venv" "python3.11-venv"
+    install_app "Python 3.11-venv" "python3.10-venv"
     install_app "Package manager" "python3-pip"
     echo
     echo -e "$red[*]$reset Virtual environment $red[*]$reset"
-    mkdir "$HOME/.virtualenvs"
-    python3 -m venv "$HOME/.virtualenvs/sec"
-    source "$HOME/.virtualenvs/sec/bin/activate"
+    mkdir $HOME/.virtualenvs
+    python3 -m venv "$HOME/.virtualenvs/sec
+    source $HOME/.virtualenvs/sec/bin/activate
     pip3 install -r requirements.txt 1>/dev/null 2>pip_error.log
     echo
     echo -e "$red[*]$reset APT Tools $red[*]$reset"

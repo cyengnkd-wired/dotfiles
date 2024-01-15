@@ -32,6 +32,7 @@ Tools() {
     install_app "Python version 3" "python3"
     install_app "Python 3.10-venv" "python3.10-venv"
     install_app "Package manager" "python3-pip"
+    install_app "Nmap" "nmap"
     echo
     echo -e "$red[*]$reset Virtual environment $red[*]$reset"
     mkdir $HOME/.virtualenvs

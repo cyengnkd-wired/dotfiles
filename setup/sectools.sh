@@ -68,14 +68,14 @@ Tools() {
             sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf "go${go_version}.linux-amd64.tar.gz"
             if [ -f "$HOME/.zshrc" ]; then
                 export PATH=$PATH:/usr/local/go/bin
-                echo "export PATH=\$PATH:/usr/local/go/bin" >> "$HOME/.zshrc"
+                echo "export PATH=$PATH:/usr/local/go/bin" >> "$HOME/.zshrc"
                 source "$HOME/.zshrc"
                 go version
                 echo "[!] Done. Go installed [!]"
                 sleep 1
             elif [ -f "$HOME/.bashrc" ]; then
                 export PATH=$PATH:/usr/local/go/bin
-                echo "export PATH=\$PATH:/usr/local/go/bin" >> "$HOME/.bashrc"
+                echo "export PATH=$PATH:/usr/local/go/bin" >> "$HOME/.bashrc"
                 source "$HOME/.bashrc"
                 go version
                 echo "[!] Done. Go installed [!]"

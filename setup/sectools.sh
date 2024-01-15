@@ -1,6 +1,7 @@
 #!/bin/bash
 
 red="\e[31m"
+green="\e[32m"
 reset="\e[97m"
 
 install_app() {
@@ -59,24 +60,25 @@ Tools() {
         user_sha256=$(sha256sum "go${go_version}.linux-amd64.tar.gz" | awk '{print $1}')
         echo "[!] Enter the hash [!] > "
         read -r expected_sha256
-        echo -e "[*****]\n$user_sha256\n$expected_sha256\n[*****]"
+        echo -e "$green[*****]$reset\n$user_sha256\n$expected_sha256\n$green[*****]$reset"
         if [ "$user_sha256" == "$expected_sha256" ]; then
             echo "[!] Hash match [!]"
             echo "[+] Installing Go [+]"
             sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf "go${go_version}.linux-amd64.tar.gz"
-            echo "go installed"
             if [ -f "$HOME/.zshrc" ]; then
                 export PATH=$PATH:/usr/local/go/bin
                 echo "export PATH=\$PATH:/usr/local/go/bin" >> "$HOME/.zshrc"
                 source "$HOME/.zshrc"
                 go version
-                echo "[!] Done. [!]"
+                echo "[!] Done. Go installed [!]"
+                sleep 1
             elif [ -f "$HOME/.bashrc" ]; then
                 export PATH=$PATH:/usr/local/go/bin
                 echo "export PATH=\$PATH:/usr/local/go/bin" >> "$HOME/.bashrc"
                 source "$HOME/.bashrc"
                 go version
-                echo "[!] Go installed [!]"
+                echo "[!] Done. Go installed [!]"
+                sleep 1
             fi
         fi
     fi

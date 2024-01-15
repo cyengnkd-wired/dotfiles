@@ -34,7 +34,7 @@ Tools() {
     echo
     echo -e "$red[*]$reset Virtual environment $red[*]$reset"
     mkdir $HOME/.virtualenvs
-    python3 -m venv "$HOME/.virtualenvs/sec
+    python3 -m venv "$HOME/.virtualenvs/sec"
     source $HOME/.virtualenvs/sec/bin/activate
     pip3 install -r requirements.txt 1>/dev/null 2>pip_error.log
     echo

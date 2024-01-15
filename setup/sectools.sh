@@ -84,7 +84,7 @@ Tools() {
     fi
 
     sleep 1
-    echo -e "$red[*]$reset Sectools $red[*]$reset"
+    echo -e "\n$red[*]$reset Sectools $red[*]$reset"
     go_tool "Assetfinder" "github.com/tomnomnom/assetfinder"
     go_tool "Subfinder" "github.com/projectdiscovery/subfinder/v2/cmd/subfinder"
     go_tool "Anew" "github.com/tomnomnom/anew"

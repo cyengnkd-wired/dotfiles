@@ -1,0 +1,87 @@
+window:
+  title: ターミネーター
+  padding:
+    x: 1
+    y: 1
+    class:
+      instance: Alacritty
+      general: Alacritty
+  dimensions:
+    columns: 100
+    lines: 27
+
+  position:
+    x: 100
+    y: 100
+  opacity: 0.95
+
+font:
+  normal:
+    family: FiraMono Nerd Font Medium
+    style: Medium
+  size: 13
+
+#colors:
+#  primary:
+#    background: '#101010'
+#    foreground: '#ffffff'
+#  normal:
+#    black: '#101010'
+#    white: '#EBEBEB'
+#    red: '#D81765'
+#    green: '#97D01A'
+#    yellow: '#FFA800'
+#    blue: '#16B1FB'
+#    magenta: '#FF2491'
+#    cyan: '#0FDCB6'
+#  bright:
+#    black: '#38252C'
+#    white: '#F8F8F8'
+#    red: '#FF0000'
+#    green: '#76B639'
+#    yellow: '#E1A126'
+#    blue: '#289CD5'
+#    magenta: '#FF2491'
+#    cyan: '#0A9B81'
+#  directory:
+#    foreground: "#ffffff"
+#    background: "#DB4660"
+draw_bold_text_with_bright_colors: true
+
+cursor:
+  style:
+    shape: Block
+    blinking: On
+
+shell:
+  program: /bin/zsh
+
+# Cores
+colors:
+  primary:
+    background: '0x000000'  # Fundo preto
+    foreground: '0xB2B2B2'  # Texto em cinza
+  selection:
+    text: '0xFF5252'        # Cor vermelha para pastas
+    background: '0x000000'  # Fundo preto
+  cursor:
+    text: '0x333333'
+    cursor: '0xFF5252'
+  normal:
+    black:   '0x000000'
+    red:     '0xFF5252'      # Cor vermelha para pastas
+    green:   '0xB2B2B2'
+    yellow:  '0xFF5252'
+    blue:    '0xB2B2B2'
+    magenta: '0xFF5252'      # Cor vermelha para pastas
+    cyan:    '0xB2B2B2'
+    white:   '0xB2B2B2'
+  bright:
+    black:   '0x666666'
+    red:     '0xFF7575'
+    green:   '0xD9D9D9'
+    yellow:  '0xFF7575'
+    blue:    '0xD9D9D9'
+    magenta: '0xFF7575'
+    cyan:    '0xD9D9D9'
+    white:   '0xD9D9D9'

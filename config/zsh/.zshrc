@@ -219,6 +219,7 @@ fi
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
+alias emax='emacs -nw'
 alias ds='source $HOME/DataScience/jupyter_env/bin/activate && jupyter lab'
 
 # Auto-suggestions

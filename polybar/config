@@ -21,7 +21,7 @@ background = #99000000
 background-alt = #373B41
 foreground = #F8F8F8
 primary = #D81765
-secondary = #97D01A
+secondary = #99ffffff
 alert = #A54242
 disabled = #707880
 
@@ -44,27 +44,23 @@ padding-left = 1
 padding-right = 1
 module-margin = 1
 
-separator = 
+separator = |
 separator-foreground = ${colors.disabled}
 
 font-0 = FiraMono Nerd Font:medium:size=8
 font-1 = Noto Color Emoji:scale=10
 
 modules-left = xworkspaces xwindow
-modules-right = filesystem pulseaudio xkeyboard memory cpu wlan eth date
-
+modules-right = filesystem pulseaudio xkeyboard memory eth date
 cursor-click = pointer
 cursor-scroll = ns-resize
 
 enable-ipc = true
+;tray-position = right
 
-; tray-position = right
+wm-restack = i3
 
-; wm-restack = generic
-; wm-restack = bspwm
-; wm-restack = i3
-
-; override-redirect = true
+;override-redirect = true
 
 [module/xworkspaces]
 type = internal/xworkspaces
@@ -93,24 +89,24 @@ label = %title:0:60:...%
 type = internal/fs
 interval = 25
 mount-0 = /
-label-mounted = 💾 %percentage_used%%
+label-mounted = 󰣆  %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.disabled}
 
 [module/pulseaudio]
 type = internal/pulseaudio
-format-volume-prefix = "🎧 "
-format-volume-prefix-foreground = ${colors.primary}
+format-volume-prefix = " "
+format-volume-prefix-foreground = ${colors.white}
 format-volume = <label-volume>
 label-volume = %percentage%%
-label-muted = 🔇
+label-muted = "󰝟 "
 label-muted-foreground = ${colors.disabled}
 
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
-label-layout = %layout%
-label-layout-foreground = ${colors.primary}
+label-layout = " "
+label-layout-foreground = ${colors.white}
 label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-foreground = ${colors.background}
@@ -119,24 +115,24 @@ label-indicator-background = ${colors.secondary}
 [module/memory]
 type = internal/memory
 interval = 1
-format-prefix = "🐸 "
-format-prefix-foreground = ${colors.primary}
+format-prefix = "󰍛 "
+format-prefix-foreground = ${colors.white}
 label = %percentage_used:2%%
 
-[module/cpu]
-type = internal/cpu
-interval = 1
-format-prefix = "🚀 "
-format-prefix-foreground = ${colors.primary}
-label = %percentage:2%%
+;[module/cpu]
+;type = internal/cpu
+;interval = 1
+;format-prefix = "🚀 "
+;format-prefix-foreground = ${colors.primary}
+;label = %percentage:2%%
 
 [module/date]
 type = internal/date
 interval = 1
-date = 🕥 %H:%M
+date = "  %H:%M  "
 date-alt = %Y-%m-%d %H:%M:%S
 label = %date%
-label-foreground = ${colors.primary}
+label-foreground = ${colors.white}
 
 ;[module/date]
 ;type = internal/script
@@ -147,4 +143,4 @@ label-foreground = ${colors.primary}
 
 [settings]		
 screenchange-reload = true
-pseudo-transparency = true
+;pseudo-transparency = true

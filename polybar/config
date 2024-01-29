@@ -18,9 +18,10 @@
 
 [colors]
 background = #99000000
-background-alt = #373B41
+background-alt = #99000000
 foreground = #F8F8F8
-primary = #D81765
+primary = #99000000
+; vermelho - FF5252
 secondary = #99ffffff
 alert = #A54242
 disabled = #707880
@@ -65,13 +66,13 @@ wm-restack = i3
 [module/xworkspaces]
 type = internal/xworkspaces
 
-label-active = %name%
+label-active = ""
 label-active-background = ${colors.background-alt}
 label-active-underline= ${colors.primary}
-label-active-padding = 1
+label-active-padding = 2
 
 label-occupied = %name%
-label-occupied-padding = 1
+label-occupied-padding = 2
 
 label-urgent = %name%
 label-urgent-background = ${colors.alert}

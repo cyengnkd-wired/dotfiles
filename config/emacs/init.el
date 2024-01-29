@@ -6,14 +6,17 @@
 (tooltip-mode -1)
 (global-linum-mode t)
 (global-visual-line-mode t)
-(set-face-attribute 'default nil :height 90)
+(set-face-attribute 'default nil
+		    :family "FiraMono Nerd Font"
+		    :height 100
+		    :weight 'medium)
 
 (column-number-mode t)
 (global-hl-line-mode t)
 (setq visible-bell t)
 
 ; Espacamento de barras
-(set-fringe-mode 10)
+;;(set-fringe-mode 10)
 
 (global-unset-key (kbd "C-z"))
 (delete-selection-mode t)
@@ -43,10 +46,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(doom-xcode))
+ '(custom-enabled-themes '(doom-dark+))
  '(custom-safe-themes
-   '("x" default))
- '(package-selected-packages '(doom-modeline doom-themes shrink-path nerd-icons compat)))
+   '("" "" "" "" "" "" "" default))
+ '(package-selected-packages
+   '(magit rainbow-delimiters doom-modeline doom-themes shrink-path nerd-icons compat)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -55,4 +59,25 @@
  )
 
 (require 'doom-modeline)
+;;(doom-modeline-mode 1)
+
+(setq doom-modeline-project-detection 'auto
+      doom-modeline-icon t
+      doom-modeline-major-mode-color-icon t
+      doom-modeline-time-icon t
+      doom-modeline-continuous-word-count-modes '(markdown-mode gfm-mode org-mode)
+      doom-modeline-buffer-encoding t
+      doom-modeline-workspace-name t
+      doom-modeline-github-interval (* 30 60)
+      doom-modeline-github nil
+      doom-modeline-modal-modern-icon t
+      doom-modeline-time t
+      doom-modeline-env-version t
+      doom-modeline-env-enable-go t)
+
 (doom-modeline-mode 1)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
+
+(set-frame-parameter (selected-frame) 'alpha '(95 . 95))
+(add-to-list 'default-frame-alist '(alpha . (95 . 95)))

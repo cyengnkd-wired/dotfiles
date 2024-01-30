@@ -111,6 +111,7 @@ Tools() {
     go_tool "Metabigor" "github.com/j3ssie/metabigor"
     go_tool "PureDNS" "github.com/d3mondev/puredns/v2"
     go_tool "xurlfind3r" "github.com/hueristiq/xurlfind3r/cmd/xurlfind3r"
+    go_tool "Rayder" "github.com/devanshbatham/rayder@v0.0.4"
     go_tool "subjs" "github.com/lc/subjs"
     go_tool "JSubfinder" "github.com/ThreatUnkown/jsubfinder"
     go_tool "getJS" "github.com/003random/getJS"

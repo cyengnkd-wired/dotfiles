@@ -115,6 +115,7 @@ Tools() {
     go_tool "subjs" "github.com/lc/subjs"
     go_tool "JSubfinder" "github.com/ThreatUnkown/jsubfinder"
     go_tool "getJS" "github.com/003random/getJS"
+    go_tool "Mapcidr" "github.com/projectdiscovery/mapcidr/cmd/mapcidr"
     
     sudo mv $HOME/go/bin/* /usr/bin/
 }

@@ -6,9 +6,9 @@ reset="\e[97m"
 Menu(){
     clear
     echo -e "$redインストーラ$reset -$redUBUNTU$reset"
-    echo "1 * Install sec tools"
-    echo "2 * Install tools"
-    echo "0 * Exit"
+    echo "[1] * Install sec tools"
+    echo "[2] * Install tools"
+    echo "[0] * Exit"
     read option
     case $option in
 	1) InstallSecTools ;;
